@@ -1,0 +1,51 @@
+body {
+  background-color: #CBD5E1;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  user-select: none;
+}
+
+a { 
+  color: #94A2B8;
+  text-decoration: none;
+  transition: .25s;
+}
+
+a:hover {
+  color: black;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.logo {
+  padding: 0.5rem;
+  background: linear-gradient(to left, #CBD5E1 50%, #000000 50%) right;
+  background-size: 200%;
+  color: black;
+  font-weight: 600;
+  transition: .25s;
+}
+
+.logo:hover {
+  background-position: left;
+}
+
+.logo:hover {
+  color: #cbd5e1;
+}
+
+main {
+  padding: 1rem 5rem 1rem 5rem;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  padding: 3rem;
+}
