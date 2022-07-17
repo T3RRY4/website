@@ -1,17 +1,35 @@
-body {
-  background-color: #CBD5E1;
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+:root {
+  --background-color: #cbd5e1;
+  --text-color: #000000;
+  --link-color: #94a2b8;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
   user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+body {
+  background-color: var(--background-color);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  color: var(--text-color);
 }
 
 a { 
-  color: #94A2B8;
+  color: var(--link-color);
   text-decoration: none;
   transition: .25s;
 }
 
 a:hover {
-  color: black;
+  color: var(--text-color);
 }
 
 header {
@@ -25,24 +43,55 @@ header {
 
 .logo {
   padding: 0.5rem;
-  background: linear-gradient(to left, #CBD5E1 50%, #000000 50%) right;
+  background: linear-gradient(to left, var(--background-color) 50%, var(--text-color) 50%) right;
   background-size: 200%;
-  color: black;
+  color: var(--text-color);
   font-weight: 600;
   transition: .25s;
 }
 
 .logo:hover {
   background-position: left;
-  color: #cbd5e1;
+  color: var(--background-color);
 }
 
 main {
-  padding: 1rem 5rem 1rem 5rem;
+  padding: 1rem 6rem 1rem 6rem;
+}
+
+section {
+  min-height: 50vh;
+}
+
+section:not(:last-of-type) {
+  padding-bottom: 1rem;
+}
+
+.greeting {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.greeting-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.greeting-text h1 {
+  margin-bottom: 0.5rem;
 }
 
 footer {
   display: flex;
   justify-content: center;
   padding: 3rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: #191a1f;
+    --text-color: #cbd5e1;
+    --link-color: #9ea0ac;
+  }
 }
